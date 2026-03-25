@@ -5,11 +5,12 @@
 using namespace EIF201;
 void Squad::expandCapacity()
 {
-
+	//otoringonaringologo
 }
 
 Squad::Squad(std::string name, int initialCapacity)
 {
+	//oto
 }
 
 Squad::~Squad()
