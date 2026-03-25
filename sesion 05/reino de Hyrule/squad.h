@@ -1,5 +1,5 @@
 #ifndef SQUAD_H
-#define SQUAD-H
+#define SQUAD_H
 
 #include "warrior.h"
 #include<string>
