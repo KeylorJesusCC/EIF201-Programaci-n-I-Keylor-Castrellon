@@ -1,5 +1,5 @@
 #ifndef SQUAD_H
-#define SQUAD-H
+#define SQUAD_H
 
 namespace EIF201 {
 	class squad
