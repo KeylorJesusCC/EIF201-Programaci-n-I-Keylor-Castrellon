@@ -15,6 +15,7 @@ bool Warrior::isValidClass(std::string cls) {
         || cls == "Mage" || cls == "Support";
 }
 
+//completado
 Warrior::Warrior(std::string name, std::string combatClass,
     int attack, int defense, int health,
     int maxSkills)
@@ -26,18 +27,42 @@ Warrior::Warrior(std::string name, std::string combatClass,
     skillCount(0),
     maxSkills(maxSkills > 0 ? maxSkills : 3) {
 
-    //completar
+    // Crear el arreglo dinamico de punteros a Skill
+    skills = new Skill * [this->maxSkills];
    
+    for (int i = 0; i < this->maxSkills; i++) {
+        skills[i] = nullptr;
+    }
 }
 
+//completado
 Warrior::~Warrior() {
-    //completar
+    
+    for (int i = 0; i < skillCount; i++) {
+        delete skills[i];
+    }
+    
+    delete[] skills;
+   
+    skills = nullptr;
+    skillCount = 0;
 }
 
 bool Warrior::learnSkill(std::string name, std::string type, int power, int cost) {
+    // Si ya conoce una habilidad con ese nombre, retornar false
+    if (hasSkill(name)) return false;
 
-    //completar 
-    return false;
+    // Si skillCount >= maxSkills, retornar false
+    if (skillCount >= maxSkills) return false;
+
+    // Crear una nueva Skill en el heap con new
+    // Almacenarla en skills[skillCount]
+    skills[skillCount] = new Skill(name, type, power, cost);
+
+    // Incrementar skillCount
+    skillCount++;
+
+    return true;
 }
 
 bool Warrior::hasSkill(std::string name) const {
@@ -55,8 +80,9 @@ int Warrior::totalSkillEffect() const {
     return sum;
 }
 
+//formula
 int Warrior::calculatePower() const {
-    //completar
+    return (attack * 2) + defense + (health / 10) + totalSkillEffect();
     return 0;
 }
 
