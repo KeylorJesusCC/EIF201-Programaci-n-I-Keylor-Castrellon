@@ -5,6 +5,7 @@
 using namespace EIF201;
 void Squad::expandCapacity()
 {
+
 }
 
 Squad::Squad(std::string name, int initialCapacity)
@@ -14,6 +15,7 @@ Squad::Squad(std::string name, int initialCapacity)
 Squad::~Squad()
 {
 }
+
 
 Warrior* Squad::recruit(std::string name, std::string cls, int atk, int def, int hp, int maxSkills)
 {
