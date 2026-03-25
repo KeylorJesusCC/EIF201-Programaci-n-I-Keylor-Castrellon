@@ -5,7 +5,6 @@
 using namespace EIF201;
 void Squad::expandCapacity()
 {
-	std::cout << "hola";
 
 }
 
