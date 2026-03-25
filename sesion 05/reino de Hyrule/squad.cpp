@@ -5,7 +5,7 @@
 using namespace EIF201;
 void Squad::expandCapacity()
 {
-
+	 cout <<2
 }
 
 Squad::Squad(std::string name, int initialCapacity)
