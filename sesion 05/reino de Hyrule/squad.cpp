@@ -48,5 +48,9 @@ void Squad::sortByPower()
 
 std::string Squad::simulateBattle(const Squad& enemy) const
 {
+	int myPower = this->totalPower();
+	int enemyPower = enemy.totalPower();
+
+	//falto
 	return std::string();
 }
