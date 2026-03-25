@@ -124,6 +124,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="reino de Hyrule.cpp" />
+    <ClCompile Include="skill.cpp" />
+    <ClCompile Include="squad.cpp" />
+    <ClCompile Include="warrior.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="skill.h" />
+    <ClInclude Include="squad.h" />
+    <ClInclude Include="warrior.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
